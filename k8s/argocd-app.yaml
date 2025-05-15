@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/lukas-camilo/fit-strike-infra'
+    repoURL: 'https://github.com/lukas-camilo/fit-strike-infra/tree/master'
     targetRevision: HEAD
     path: k8s # pasta onde estão os YAMLs
   destination:
