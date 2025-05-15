@@ -12,4 +12,4 @@ spec:
       metadata:
         # O nome do interceptor deve ser igual ao configurado no KEDA HTTP Add-on
         # Ajuste se necessário
-        host: fit-strike-app.local
+        host: fit-strike.local
