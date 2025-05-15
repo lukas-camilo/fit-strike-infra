@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/lukas-camilo/fit-strike-infra/tree/master'
-    targetRevision: HEAD
+    repoURL: 'https://github.com/lukas-camilo/fit-strike-infra.git'
+    targetRevision: master
     path: k8s # pasta onde estão os YAMLs
   destination:
     server: 'https://kubernetes.default.svc'
