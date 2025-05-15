@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fit-strike-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fit-strike-app
+  template:
+    metadata:
+      labels:
+        app: fit-strike-app
+    spec:
+      containers:
+      - name: fit-strike-app
+        image: lucascamilo2024/fit-strike-api:latest
+        ports:
+        - containerPort: 80 # ajuste conforme sua aplicação
