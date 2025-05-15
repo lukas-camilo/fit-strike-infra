@@ -16,7 +16,7 @@ spec:
       - name: fit-strike-app
         image: lucascamilo2024/fit-strike-api:latest
         ports:
-        - containerPort: 80 # ajuste conforme sua aplicação
+        - containerPort: 8080
         env:
           - name: SPRING_PROFILES_ACTIVE
             value: "prod"

@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: fit-strike-app-ingress
+  namespace: default # ajuste se necessário
+  annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+spec:
+  rules:
+    - host: fit-strike.local
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: fit-strike-app-service # nome do seu Service
+                port:
+                  number: 8080 # porta do seu Service
