@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: fit-strike-app
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: fit-strike-app
