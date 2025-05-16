@@ -2,7 +2,7 @@ apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
   name: keda-add-ons-http-interceptor
-  namespace: keda
+  namespace: default
 spec:
   minAvailable: 1
   selector:

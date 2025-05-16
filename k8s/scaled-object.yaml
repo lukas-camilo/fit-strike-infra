@@ -9,7 +9,7 @@ spec:
         name: fit-strike-app
         kind: Deployment
         apiVersion: apps/v1
-        service: fit-strike-app-service
+        service: fit-strike-app
         port: 8080
     replicas:
         min: 0
