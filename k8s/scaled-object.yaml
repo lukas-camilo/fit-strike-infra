@@ -1,15 +1,15 @@
-apiVersion: keda.sh/v1alpha1
-kind: ScaledObject
+apiVersion: http.keda.sh/v1alpha1
+kind: HTTPScaledObject
 metadata:
-  name: fit-strike-app-scaledobject
+  name: fit-strike-app-http
 spec:
   scaleTargetRef:
-    name: fit-strike-app # nome do deployment
-  minReplicaCount: 0
-  maxReplicaCount: 5
-  triggers:
-    - type: "http"
-      metadata:
-        # O nome do interceptor deve ser igual ao configurado no KEDA HTTP Add-on
-        # Ajuste se necessário
-        host: fit-strike.local
+    name: fit-strike-app
+    service: 
+      name: fit-strike-app
+      port: 8080
+  replicas:
+    min: 0
+    max: 5
+  hosts:
+    - fit-strike.local
