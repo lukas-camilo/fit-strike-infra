@@ -1,11 +1,11 @@
-apiVersion: policy/v1
-kind: PodDisruptionBudget
-metadata:
-  name: keda-add-ons-http-interceptor
-  namespace: keda
-spec:
-  minAvailable: 1
-  selector:
-    matchLabels:
-      app.kubernetes.io/component: interceptor
-      app.kubernetes.io/part-of: keda-add-ons-http
+# apiVersion: policy/v1
+# kind: PodDisruptionBudget
+# metadata:
+#   name: keda-add-ons-http-interceptor
+#   namespace: keda
+# spec:
+#   minAvailable: 1
+#   selector:
+#     matchLabels:
+#       app.kubernetes.io/component: interceptor
+#       app.kubernetes.io/part-of: keda-add-ons-http

@@ -139,7 +139,7 @@ Adicione também o add-on Keda HTTP para realizar o scalling baseado em métrica
 `helm install http-add-on kedacore/keda-add-ons-http --namespace keda --create-namespace -f values.yaml`
 
 
-> **Atenção:** Para que as aplicações façam o scalling corretamente será necessário criar o objeto ScaledObject apontando para o deployment da aplicação, abaixo um código de exemplo:
+>  ⚠️ **Atenção:** Para que as aplicações façam o scalling corretamente será necessário criar o objeto ScaledObject apontando para o deployment da aplicação, abaixo um código de exemplo:
 >
 >```
 >apiVersion: keda.sh/v1alpha1
@@ -209,11 +209,22 @@ spec:
       nodePort: 30080 # porta externa, pode ajustar
 ```
 
+> ⚠️ **Atenção:** Para esse exemplo será necessário setar o valor das secrets no cluster:
+>
+>```
+>kubectl delete secret aws-credentials
+>kubectl create secret generic aws-credentials \
+>  --from-literal=AWS_ACCESS_KEY_ID=SEU_ACCESS_KEY_ID \
+>  --from-literal=AWS_SECRET_ACCESS_KEY=SEU_SECRET_ACCESS_KEY
+>```
+
 3. Aplique ambos arquivos em seu cluster:
 
 ```
 kubectl apply -f app-deployment.yaml
 kubectl apply -f app-service.yaml
+kubectl apply -f app-ingress.yaml
+kubectl apply -f argocd-app.yaml
 kubectl apply -f scaled-object.yaml
 ```
 

@@ -1,15 +1,15 @@
-apiVersion: http.keda.sh/v1alpha1
-kind: HTTPScaledObject
-metadata:
-  name: fit-strike-app-http
-spec:
-  scaleTargetRef:
-    name: fit-strike-app
-    service: 
-      name: fit-strike-app
-      port: 8080
-  replicas:
-    min: 0
-    max: 5
-  hosts:
-    - fit-strike.local
+# apiVersion: http.keda.sh/v1alpha1
+# kind: HTTPScaledObject
+# metadata:
+#   name: fit-strike-app-http
+# spec:
+#   scaleTargetRef:
+#     name: fit-strike-app
+#     service: 
+#       name: fit-strike-app
+#       port: 8080
+#   replicas:
+#     min: 0
+#     max: 5
+#   hosts:
+#     - fit-strike.local
