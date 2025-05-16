@@ -14,6 +14,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: fit-strike-app-service # nome do seu Service
+                name: keda-add-ons-http-interceptor-proxy # nome do seu Service
                 port:
                   number: 8080 # porta do seu Service
