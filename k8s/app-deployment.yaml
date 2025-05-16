@@ -32,3 +32,11 @@ spec:
                 key: AWS_SECRET_ACCESS_KEY
           - name: AWS_REGION
             value: "us-east-1"
+        readinessProbe:
+          httpGet:
+            path: /actuator/health   # ajuste para o endpoint de health da sua aplicação
+            port: 8080
+          initialDelaySeconds: 3     # tempo antes da primeira checagem
+          periodSeconds: 2           # intervalo entre checagens
+          failureThreshold: 5        # quantas falhas até considerar "not ready"
+          timeoutSeconds: 2          # timeout de cada checagem

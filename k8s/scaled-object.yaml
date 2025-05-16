@@ -14,6 +14,8 @@ spec:
     replicas:
         min: 0
         max: 5
+    interceptor:
+        timeout: 10s
     scaledownPeriod: 60
     scalingMetric:
         requestRate:
