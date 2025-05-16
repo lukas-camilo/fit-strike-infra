@@ -1,2 +1,3 @@
 kind.exe
 k8s/secret.yaml
+k8s/kind-config.yaml
