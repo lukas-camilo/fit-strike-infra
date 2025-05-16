@@ -131,12 +131,12 @@ Adicione o kedacore utilizando Helm:
 ```
 helm repo add kedacore https://kedacore.github.io/charts
 helm repo update
-helm install keda kedacore/keda --namespace keda --create-namespace
+helm install keda kedacore/keda --namespace default --create-namespace
 ```
 
 Adicione também o add-on Keda HTTP para realizar o scalling baseado em métricas de requests HTTP:
 
-`helm install http-add-on kedacore/keda-add-ons-http --namespace keda --create-namespace -f values.yaml`
+`helm install http-add-on kedacore/keda-add-ons-http --namespace default --create-namespace -f values.yaml`
 
 
 >  ⚠️ **Atenção:** Para que as aplicações façam o scalling corretamente será necessário criar o objeto ScaledObject apontando para o deployment da aplicação, abaixo um código de exemplo:

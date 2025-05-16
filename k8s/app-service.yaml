@@ -6,5 +6,5 @@ spec:
   selector:
     app: fit-strike-app
   ports:
-    - port: 80
+    - port: 8080
       targetPort: 8080
